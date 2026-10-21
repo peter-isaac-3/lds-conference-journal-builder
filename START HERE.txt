@@ -10,7 +10,7 @@ HOW TO USE IT
 -------------
  1. Double-click the file for your computer:
         Windows:  "Start Journal Maker (Windows).bat"
-        Mac:      "Start Journal Maker (Mac).command"
+        Mac:      "Start Journal Maker (Mac).command"   (if it won't open, see MAC below)
 
     The first time, it sets itself up (a minute or two, needs internet). After that
     it starts right away.
@@ -41,12 +41,19 @@ IF SOMETHING GOES WRONG
 
  * Windows says "Windows protected your PC": click "More info", then "Run anyway".
 
- * Mac says the file can't be opened because it is from an unidentified developer:
-   right-click (or Control-click) the file, choose "Open", then click "Open" again.
-
- * Mac says "permission denied", or the file opens in a text editor instead of
-   running: open the Terminal app, type   bash   then a space, drag the
-   "Start Journal Maker (Mac).command" file into the Terminal window, and press Return.
+ * MAC: if double-clicking "Start Journal Maker (Mac).command" doesn't work (it says it
+   can't be opened, "permission denied", or opens in a text editor), do this once:
+     1. Press Cmd + Space, type Terminal, and press Return.
+     2. Type  cd  and a space, then drag the "Conference Journal Maker" folder from
+        Finder into the Terminal window, and press Return.
+     3. Paste this line and press Return:
+          xattr -cr . ; chmod +x "Start Journal Maker (Mac).command" ; bash "Start Journal Maker (Mac).command"
+   That removes the "downloaded from the internet" block and lets the file run, and it
+   starts Journal Maker. After that, double-clicking the file should work.
+   - If a box asks to install "command line developer tools", click Install, wait for
+     it to finish, then run step 3 again.
+   - If it says Python is needed, install it from the page that opens, then run
+     step 3 again.
 
  * The page didn't open by itself: look at the black window for a line starting with
    http://127.0.0.1 and type that into your browser's address bar.
