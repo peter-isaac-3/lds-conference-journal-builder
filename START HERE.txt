@@ -1,0 +1,63 @@
+CONFERENCE JOURNAL MAKER
+========================
+Turns General Conference talks into a printable study journal: a cover, table of
+contents, every talk with room to write beside it, footnotes, and page numbers.
+
+Nothing is uploaded anywhere. It runs on your own computer.
+
+
+HOW TO USE IT
+-------------
+ 1. Double-click the file for your computer:
+        Windows:  "Start Journal Maker (Windows).bat"
+        Mac:      "Start Journal Maker (Mac).command"
+
+    The first time, it sets itself up (a minute or two, needs internet). After that
+    it starts right away.
+
+ 2. A page opens in your web browser. Paste a link from churchofjesuschrist.org:
+        - a whole conference    (e.g. .../study/general-conference/2026/10)
+        - every talk by a speaker  (.../study/general-conference/speakers/dallin-h-oaks)
+        - every talk on a topic    (.../study/general-conference/topics/atonement)
+    (The page has example buttons and a "How do I find a link?" help section.)
+
+ 3. Optionally type your name (it goes on the cover), then click "Create my journal".
+
+ 4. When it says your journal is ready, click "Open my journal". It is saved in
+        Documents > Conference Journals
+    Print it double-sided and put it in a binder.
+
+ Big collections (like a topic with 300+ talks) take several minutes to download and
+ make a very long PDF. You can press Stop and run it again later; it remembers what
+ it already downloaded.
+
+ When you're done, click "Quit Journal Maker" at the bottom of the page.
+
+
+IF SOMETHING GOES WRONG
+-----------------------
+ * "Python isn't installed": follow the on-screen steps (it is a free program from
+   python.org). On Windows, tick "Add python.exe to PATH" in the installer.
+
+ * Windows says "Windows protected your PC": click "More info", then "Run anyway".
+
+ * Mac says the file can't be opened because it is from an unidentified developer:
+   right-click (or Control-click) the file, choose "Open", then click "Open" again.
+
+ * Mac says "permission denied", or the file opens in a text editor instead of
+   running: open the Terminal app, type   bash   then a space, drag the
+   "Start Journal Maker (Mac).command" file into the Terminal window, and press Return.
+
+ * The page didn't open by itself: look at the black window for a line starting with
+   http://127.0.0.1 and type that into your browser's address bar.
+
+ * Still stuck? Send a photo of the black window to whoever shared this with you.
+
+
+FOR TECH-MINDED PEOPLE
+----------------------
+ pip install -r requirements.txt
+ python journal_app.py                       (the web page)
+ python build_journal.py <link> --name "..."  (command line; add --help for options)
+Uses the free Liberation Serif font (in the fonts folder, SIL Open Font License).
+For personal study use.
